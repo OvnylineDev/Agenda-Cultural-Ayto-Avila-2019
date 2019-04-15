@@ -6,34 +6,34 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, maximum-scale=2.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 		<meta name="robots" content="NOINDEX,NOFOLLOW,NOARCHIVE,NOODP,NOSNIPPET">
-		
+
 		<link href="./styles/estilos_01.css" rel="stylesheet" type="text/css">
 		<link href="./styles/swiper.min.css" rel="stylesheet" type="text/css">
-		
+
 		<script src="./js/jquery.js"></script>
 		<script src="./js/jqueryui.js"></script>
 		<script src="./js/jquery.ui.touch-punch.min.js"></script>
 		<script src="./js/funciones.js"></script>
 		<script src="./cordova.js"></script>
-		
+
 		<script>
 		var fecha_actual=addZero(current_day_of_month)+"-"+addZero(parseInt(current_month,10))+"-"+current_year;
-		
+
 		$(document).ready(function() {
 			$("#fecha_hoy").html(format_date2(fecha_actual));
-			
+
 			$('#cortina').hide('fade', function() {
-			
+
 				$('#contenedor').show();
-				
+
 			}, 100);
-						
+
 		});
-		
+
 		document.addEventListener("deviceready", function() {
-					
+
 			get_data_api(fecha_actual, '', 'events_slide', 'swiper_container');
-			
+
 			var swiper = new Swiper('.swiper-container', {
 				paginationClickable: false,
 				slidesPerView: 1,
@@ -44,71 +44,75 @@
 				autoplay: 3000,
 				autoplayDisableOnInteraction: true
 			});
-			
+
 		});
-		
+
 		function onBackKeyDown()
 		{
 			navigator.app.exitApp();
 			return false;
 		}
-		</script>		
+		</script>
 	</head>
 
 	<body class="ov_body_01" onload="onBodyLoad()">
 		<div id="cortina"> </div>
 
 		<div class="contenedor" >
-			
-			<!-- Ads 
+
+			<!-- Ads
 			<div class="contenedor_ads">
-				<iframe id="iframe_ads" class="iframe_ads" src=""> </iframe>	
+				<iframe id="iframe_ads" class="iframe_ads" src=""> </iframe>
 			</div>
 			Ads -->
-			
+
 			<div class="hoy" id="fecha_hoy"> </div>
-			
+
 			<div class="swiper-container lista_eventos">
 				<!-- SLIDER -->
 				<div class="swiper-wrapper lista_eventos_02" id="swiper_container">
 					<div class="swiper-slide">-</div>
 				</div>
-				
+
 			</div>
-			
+
 			<script src="./js/swiper.min.js"></script>
-			
+
+			<div class="eventos">
+				<span>AGENDA 2019</span>
+			</div>
+
 			<div class="eventos" onclick="go_to_page('eventos')">
 				¿QUÉ HACER?<br>
 				<span>AGENDA</span>
 			</div>
-			
+
 			<div class="programa" onclick="go_to_page('programa')">
 				Programas de fiestas<br>
 				<span>VER PROGRAMAS</span>
 			</div>
-			
+
 			<div class="lugares" onclick="go_to_page('mapa_puntos')">
 				¿QUÉ VER?<br>
 				<span>LUGARES DE INTERÉS</span>
 			</div>
-			
+
 			<!--<div class="ofertas"onclick="go_to_page('ofertas')">
 				CUPONES<br>
 				<span>OFERTAS</span>
 			</div>-->
-			
+
 			<div class="servicios" onclick="go_to_page('servicios')">
 				INFO<br>
 				<span>SERVICIOS</span>
 			</div>
-			
+
 			<div class="info" onclick="go_to_page('acercade')">
 				INFORMACIÓN<br>
 				<span>ACERCA DE</span>
 			</div>
-		
-		</div>		
+
+		</div>
 	</body>
-	
+
 </html>
