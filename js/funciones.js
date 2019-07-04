@@ -1,7 +1,7 @@
 //var api_url='http://www.avilaturismo.com/api.php';
 //var api_url='./server/api.php';
 //var api_url='https://agendacultural.ovnyline.net/.agenda/api.php';
-var api_url='http://hoopale.com/AGENDACULTURAL/';
+var api_url='http://hoopale.com/AGENDACULTURAL/api.php';
 //var kml_url='http://www.avilaturismo.com/app/resources/avila.kml';
 //var extern_url='http://www.avilaturismo.com/app/';
 //var extern_url='./server/resources/';
